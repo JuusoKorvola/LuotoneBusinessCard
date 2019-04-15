@@ -7,15 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class HomeScreen extends AppCompatActivity {
-    private Button button;
+    private Button button_to_login_screen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        button = findViewById(R.id.login);
-        button.setOnClickListener(new View.OnClickListener() {
+        button_to_login_screen = (Button) findViewById(R.id.button_to_login_screen);
+        button_to_login_screen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openLoginScreen();

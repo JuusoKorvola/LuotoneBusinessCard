@@ -1,90 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background_image"
-    tools:context=".LoginScreen">
+    android:orientation="vertical"
+    tools:context=".HomeScreen">
 
+
+    <!--Following are the views of Login Page-->
+    <!--For Back button-->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back_button" />
+
+    <!--For app's logo -->
     <ImageView
         android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/app_logo"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/app_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        android:src="@drawable/app_logo" />
 
+    <!--For title text-->
     <TextView
-        android:layout_width="294dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/abel_regular"
+        android:gravity="center_horizontal"
         android:text="@string/app_name"
+        android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
+        android:textSize="50sp" />
 
+    <!--For App's slogan-->
     <TextView
-        android:layout_width="348dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/abel_regular"
+        android:gravity="center_horizontal"
         android:text="@string/slogan"
+        android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        android:textSize="18sp" />
 
+    <!--For grouping of input field for username and password for login-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!--Username-->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/abel_regular"
+            android:padding="@dimen/fab_margin"
+            android:layout_gravity="center"
+            android:text="Username"
+            android:textSize="20dp" />
+
+        <!--Password-->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/abel_regular"
+            android:padding="@dimen/fab_margin"
+            android:text="Password"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+    <!--End of grouping of input field for username and password for login-->
+
+
+
+    <!--Login Button-->
     <Button
-        android:id="@+id/login"
-        android:layout_width="134dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="64dp"
-        android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:id="@+id/login_user"
+        android:layout_width="wrap_content"
+        android:layout_height= "50dp"
+        android:text="Log In"
+        android:layout_margin="@dimen/fab_margin"
+        android:fontFamily="@font/abel_regular"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"/>
 
+    <!--Clickable text to reset password if forgotten-->
     <Button
-        android:id="@+id/sign_up"
-        android:layout_width="134dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="64dp"
-        android:text="@string/sign_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:id="@+id/reset_button_for_forgotten_password"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/abel_regular"
+        android:text="Forgot Password"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
 
-</android.support.constraint.ConstraintLayout>
+    <!--Clickable text to redirect page to sign up screen-->
+    <Button
+        android:id="@+id/redirect_to_signup_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="@font/abel_regular"
+        android:background="@android:color/transparent"
+        android:text="Sign Up"
+        android:textSize="18sp"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

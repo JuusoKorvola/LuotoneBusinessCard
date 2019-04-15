@@ -3,18 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <item
-        android:id="@+id/backButton"
-        android:icon="@drawable/ic_back_button_black"
-        app:showAsAction="ifRoom"
-        android:title="profileicon"
-        />
+    <!--This file creates all the menu of the top toolbar-->
+    <!--Icons are for profile and back button-->
 
     <item
         android:id="@+id/profileMenu"
-        android:icon="@drawable/ic_profile_dark"
-        app:showAsAction="ifRoom"
-        android:title="profileicon"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="always"
+        android:title="profileIcon"
         />
 
 </menu>
